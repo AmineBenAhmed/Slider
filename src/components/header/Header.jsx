@@ -6,7 +6,7 @@ import images from '../../enums/images';
 export default () => {
   return (
     <>
-    <Slider slides={images} autoPlay={3000} />
+    <Slider slides={images} autoPlay={false} />
     </>
   )
 }

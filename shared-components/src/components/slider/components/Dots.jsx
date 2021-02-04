@@ -1,7 +1,8 @@
 import React from 'react';
 import { css, jsx } from '@emotion/react';
 
-const Dot = ({ active }) => (
+const Dot = ({ active }) => {
+  return (
   <span
     css={css`
       padding: 6px;
@@ -11,9 +12,10 @@ const Dot = ({ active }) => (
       background: ${active ? 'black' : 'white'};
     `}
   />
-)
+)}
 
-const Dots = ({slides, activeIndex}) => (
+const Dots = ({ slides, activeSlide }) => {
+  return (
   <div
     css={css`
       position: absolute;
@@ -25,9 +27,9 @@ const Dots = ({slides, activeIndex}) => (
     `}
   >
     {slides.map((slide, i) => (
-      <Dot key={slide} active={activeIndex === i} />
+      <Dot key={slide} active={activeSlide === i} />
     ))}
   </div>
-);
+)};
 
 export default Dots;
